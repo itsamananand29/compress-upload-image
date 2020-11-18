@@ -1,23 +1,28 @@
 
 const compress= ()=>{
+    const error = document.querySelector('#error');
+    error.innerHTML='';
+    document.querySelector('#input').src='';  
+    document.querySelector('#output').src='';
+    document.querySelector('#output2').src =''; 
     console.log('connected!!')
     const uploadedFile = document.querySelector('#upload').files[0];   //Select the upload image to create the preview of it 
     if(!uploadedFile){          // check if any file was selected by user or not 
-        const error = document.querySelector('#error'); // display the error message 
-        error.innerHTML = 'Image not selected !!'; 
+         
+        error.innerHTML = 'Image not selected !!';// display the error message  
         return
     }
     const extension = uploadedFile.name.split('.')[1];    // Get the extension of the file uploaded 
     if(extension !== 'jpeg' && extension !== 'jpg' && extension !== 'png' ){  // check if the file uploaded is of correct format 
-        const error = document.querySelector('#error');    
+         
         error.innerHTML = 'Select any image of type .jpeg, .jpg or .png format only !!'; // display error message
         return
         
     }
-    
-    const reader = new FileReader();  // creating a file reader object 
-    reader.readAsDataURL(uploadedFile); // reading the content of the file uploaded 
-    reader.onload= (e)=>{
+    else{
+        const reader = new FileReader();  // creating a file reader object 
+        reader.readAsDataURL(uploadedFile); // reading the content of the file uploaded 
+        reader.onload= (e)=>{
         const inputImage = document.createElement('img'); // creating an img element using the document object model function 
         inputImage.src = e.target.result;   // set the image to be displayed uploaded by the user
         document.querySelector('#input').src = e.target.result;
@@ -44,4 +49,6 @@ const compress= ()=>{
         }    
         
     }
+    }
+    
 }

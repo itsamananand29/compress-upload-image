@@ -44,12 +44,3 @@ width: 90px;
   padding: 14px 30px;
   text-align: center;
 }
-.footer{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: #37475a;
-    text-align: center;
-    padding-top: 5px;
-    box-sizing: border-box;
-  }
