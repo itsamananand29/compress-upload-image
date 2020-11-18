@@ -37,4 +37,10 @@ $ cd C:\Users\Yamer\Documents\Projects\assement
 
 This we can compress the image size by 10 and 20 (i.e. imageSize/10 or imageSize/20) and can increase the uploading speed of large images greatly . 
 
+### Test 
+
+To see the images being uploaded on the firebase check the url 
+
+gs://upload-and-compress-file.appspot.com/
+
 
