@@ -1,0 +1,23 @@
+{
+  "name": "assement",
+  "version": "1.0.0",
+  "description": "- About the Project\r - Built With\r     - Getting Started\r - Prerequisites\r - Installation\r - Usage",
+  "main": "app.js",
+  "dependencies": {
+    "firebase": "^8.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aman Anand",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsamananand29/compress-upload-image.git"
+  },
+  "bugs": {
+    "url": "https://github.com/itsamananand29/compress-upload-image/issues"
+  },
+  "homepage": "https://github.com/itsamananand29/compress-upload-image#readme"
+}
