@@ -35,7 +35,7 @@ const compress= ()=>{
         error.innerHTML = 'Image not selected !!';// display the error message  
         return
     }
-    const extension = uploadedFile.name.split('.')[1];    // Get the extension of the file uploaded 
+    const extension =  uploadedFile.name.substr(uploadedFile.name.lastIndexOf('.') + 1);   // Get the extension of the file uploaded 
     if(extension !== 'jpeg' && extension !== 'jpg' && extension !== 'png' ){  // check if the file uploaded is of correct format 
          
         error.innerHTML = 'Select any image of type .jpeg, .jpg or .png format only !!'; // display error message
@@ -43,7 +43,7 @@ const compress= ()=>{
         
     }
     else{
-
+        document.getElementById('imageSize').innerHTML='Uploading images after compression ... ';
         const reader = new FileReader();  // creating a file reader object 
         reader.readAsDataURL(uploadedFile); // reading the content of the file uploaded 
         reader.onload= (e)=>{
@@ -65,6 +65,7 @@ const compress= ()=>{
             // Get the download URL
             ref0.getDownloadURL().then(function(url) {
             // Insert url into an <img> tag to "download"
+            document.getElementById('imageSize').innerHTML='The image has been scaled for better preview';
             document.querySelector('#input').src=url;// set the image as the source of the output image
             }).catch(function(error) {
                 console.log(error.code)
@@ -88,7 +89,7 @@ const compress= ()=>{
             firebase.storage().ref().child(fileName1).putString(base64Name1, 'base64', {contentType:'image/jpg'})
             .then(snapshot =>{  
                 //console.log(snapshot.ref._delegate._location.path_);
-                
+
                 //retrive the data from firebase 
                 var ref1 = firebase.storage().ref().child(snapshot.ref._delegate._location.path_);
                 // Get the download URL
@@ -116,7 +117,9 @@ const compress= ()=>{
             firebase.storage().ref().child(fileName2).putString(base64Name2, 'base64', {contentType:'image/jpg'})
             .then(snapshot =>{  
                 //console.log(snapshot.ref._delegate._location.path_);
-                
+               
+                document.getElementById('imageSize').innerHTML='Retriving the uploaded images ... ';
+            
                 //retrive the data from firebase 
                 var ref2 = firebase.storage().ref().child(snapshot.ref._delegate._location.path_);
                 // Get the download URL

@@ -44,3 +44,8 @@ width: 90px;
   padding: 14px 30px;
   text-align: center;
 }
+#input{
+    border: 0px;
+    height:400px;
+    width: 500px;
+}
