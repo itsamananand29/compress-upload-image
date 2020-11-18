@@ -3,44 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
     <title>
         Image compression and upload using JavaScript 
     </title>
 </head>
 <body>
     <header>
-        <h1>
+        <h1 class="heading">
             Image compression and upload using JavaScript
         </h1>
     </header>
-    <main>
+    <main class='container'>
+        <div >
         <input id='upload' type="file" accept=".jpg, .png, .jpeg">
-        <div>
-            <button onclick="process()">Compress and upload</button>
+        
+            <button class = 'upload' onclick="compress()">Upload</button>
         </div>
         <div>
-            <h2>
+            <h2 class="heading">
                 Input Image
             </h2>
             <h3 id='error'></h3>
             <img id='input'>
         </div>
         <div>
-            <h2>
+            <h2 class="heading">
                 Image compressed by 10
             </h2>
             <img id='output'>
         </div>
+        <br>
+        <br>
         <div>
-            <h2>
+            <h2 class="heading">
                 Image compressed by 20
             </h2>
             <img id='output2'>
         </div>
     </main>
-    <!-- <footer>
+    <footer class="footer">
         <p>Copyright @Aman Anand</p>
-    </footer> -->
+    </footer>
     <script src="app.js" ></script>
 </body>
 </html>
