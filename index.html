@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Image compression and upload using JavaScript 
+    </title>
+</head>
+<body>
+    <header>
+        <h1>
+            Image compression and upload using JavaScript
+        </h1>
+    </header>
+    <main>
+        <input id='upload' type="file" accept=".jpg, .png, .jpeg">
+        <div>
+            <button onclick="process()">Compress and upload</button>
+        </div>
+        <div>
+            <h2>
+                Input Image
+            </h2>
+            <h3 id='error'></h3>
+            <img id='input'>
+        </div>
+        <div>
+            <h2>
+                Image compressed by 10
+            </h2>
+            <img id='output'>
+        </div>
+        <div>
+            <h2>
+                Image compressed by 20
+            </h2>
+            <img id='output2'>
+        </div>
+    </main>
+    <!-- <footer>
+        <p>Copyright @Aman Anand</p>
+    </footer> -->
+    <script src="app.js" ></script>
+</body>
+</html>
